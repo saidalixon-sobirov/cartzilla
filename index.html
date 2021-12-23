@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartzilla</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      class="
+        navbar navbar-sticky navbar-expand-lg navbar-light
+        d-block
+        py-3
+        shadow-sm
+      "
+    >
+      <div class="container">
+        <a class="navbar-brand d-none d-sm-block" href="#">
+          <img src="./img/logo-dark.png" alt="" width="142" />
+        </a>
+        <a class="navbar-brand d-sm-none" href="#">
+          <img src="./img/logo-icon.png" alt="" width="74" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-2 mb-2 mb-lg-0 new pe-4 ms-lg-4">
+            <div class="collapse d-lg-none d-block" id="collapseExample">
+              <div class="container py-2">
+                <div class="input-group">
+                  <i
+                    class="
+                      bi bi-search
+                      position-absolute
+                      top-50
+                      start-0
+                      translate-middle-y
+                      ms-3
+                      z-index
+                    "
+                  ></i>
+                  <input
+                    class="form-control rounded-start searchIcon p-2"
+                    type="search"
+                    placeholder="What do you need?"
+                  />
+                </div>
+              </div>
+            </div>
+            <li class="nav-item dropdown ps-3">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-geo-alt"></i>
+                New York
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item fsz" href="#">Los Angeles</a></li>
+                <li><a class="dropdown-item fsz" href="#">Chicago</a></li>
+                <li><a class="dropdown-item fsz" href="#">Houston</a></li>
+                <li><a class="dropdown-item fsz" href="#">Florida</a></li>
+                <li><a class="dropdown-item fsz" href="#">San Diego</a></li>
+                <li><a class="dropdown-item fsz" href="#">Miami</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-between fat">
+            <ul class="navbar-nav ps-3">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Cuisine
+                </a>
+                <div class="dropdown-menu">
+                  <div class="d-flex">
+                    <div class="drop-col-card pt-4 px-3">
+                      <div class="mb-3">
+                        <a href="#" class="d-block">
+                          <img
+                            src="./img/burger.svg"
+                            alt=""
+                            width="60"
+                            class="d-block mx-auto mb-3"
+                          />
+                          <h6 class="text-center fs-base">Burgers & Fries</h6>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="drop-col-card pt-4 px-3">
+                      <div class="mb-3">
+                        <a href="#" class="d-block">
+                          <img
+                            src="./img/noodles.svg"
+                            alt=""
+                            width="60"
+                            class="d-block mx-auto mb-3"
+                          />
+                          <h6 class="text-center fs-base">Noodles</h6>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="drop-col-card pt-4 px-3">
+                      <div class="mb-3">
+                        <a href="#" class="d-block">
+                          <img
+                            src="./img/pizza.svg"
+                            alt=""
+                            width="60"
+                            class="d-block mx-auto mb-3"
+                          />
+                          <h6 class="text-center fs-base">Burgers & Fries</h6>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="drop-col-card pt-4 px-3">
+                      <div class="mb-3">
+                        <a href="#" class="d-block">
+                          <img
+                            src="./img/steak.svg"
+                            alt=""
+                            width="60"
+                            class="d-block mx-auto mb-3"
+                          />
+                          <h6 class="text-center fs-base">Grill & Steaks</h6>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="drop-col-card pt-4 px-3">
+                      <div class="mb-3">
+                        <a href="#" class="d-block">
+                          <img
+                            src="./img/fish.svg"
+                            alt=""
+                            width="60"
+                            class="d-block mx-auto mb-3"
+                          />
+                          <h6 class="text-center fs-base">Fish & Seafood</h6>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="drop-col-card pt-4 px-3">
+                      <div class="mb-3">
+                        <a href="#" class="d-block">
+                          <img
+                            src="./img/healthy.svg"
+                            alt=""
+                            width="60"
+                            class="d-block mx-auto mb-3"
+                          />
+                          <h6 class="text-center fs-base">Healthy food</h6>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="drop-col-card pt-4 px-3">
+                      <div class="mb-3">
+                        <a href="#" class="d-block">
+                          <img
+                            src="./img/cuisine.svg"
+                            alt=""
+                            width="60"
+                            class="d-block mx-auto mb-3"
+                          />
+                          <h6 class="text-center fs-base">Hause Cuisine</h6>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="drop-col-card pt-4 px-3">
+                      <div class="mb-3">
+                        <a href="#" class="d-block">
+                          <img
+                            src="./img/chicken.svg"
+                            alt=""
+                            width="60"
+                            class="d-block mx-auto mb-3"
+                          />
+                          <h6 class="text-center fs-base">Chicken & Snaks</h6>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="drop-col-card pt-4 px-3">
+                      <div class="mb-3">
+                        <a href="#" class="d-block">
+                          <img
+                            src="./img/coffee.svg"
+                            alt=""
+                            width="60"
+                            class="d-block mx-auto mb-3"
+                          />
+                          <h6 class="text-center fs-base">Coffee & Desserts</h6>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Back to main demo</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav searchIconBox">
+              <li
+                class="nav-item float-end"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseExample"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                <i class="bi bi-search d-none d-lg-block"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="collapse menuse" id="collapseExample">
+        <div class="container py-2">
+          <div class="input-group">
+            <i
+              class="
+                bi bi-search
+                position-absolute
+                top-50
+                start-0
+                translate-middle-y
+                ms-3
+                z-index
+              "
+            ></i>
+            <input
+              class="form-control rounded-start searchIcon p-2"
+              type="search"
+              placeholder="What do you need?"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <section class="main-section">
+      <div class="container">
+        <div class="row justify-content-center my-5">
+          <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10 text-center">
+            <h5 class="text-light fw-light mb-2">
+              #1 Food Delivery Service since 2010
+            </h5>
+            <div class="h1 text-light mb-3 pb-4 fw-bold">
+              We deliver your favorite food fresh & fast in
+              <div class="dropdown d-inline-block">
+                <a
+                  class="nav-link dropdown-toggle p-0 york"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="true"
+                >
+                  New York
+                </a>
+                <ul class="dropdown-menu btn-menu">
+                  <li><a class="dropdown-item fsz" href="#">Los Angeles</a></li>
+                  <li><a class="dropdown-item fsz" href="#">Chicago</a></li>
+                  <li><a class="dropdown-item fsz" href="#">Houston</a></li>
+                  <li><a class="dropdown-item fsz" href="#">Florida</a></li>
+                  <li><a class="dropdown-item fsz" href="#">San Diego</a></li>
+                  <li><a class="dropdown-item fsz" href="#">Miami</a></li>
+                </ul>
+              </div>
+            </div>
+            <a class="btn btn-primary py-2 px-3" href="#cousine" data-scroll>
+              What do you want to eat?
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending foods -->
+    <section class="trending-food py-4 py-sm-5" id="cousine">
+      <div class="container">
+        <h2 class="text-center pt-4 pt-sm-3">Trending food in your city</h2>
+        <p class="text-muted text-center mb-5">
+          Choose what you want and we dilever it to you
+        </p>
+        <div class="row">
+          <div class="col-md-4 col-6 mb-grid-gutter">
+            <a href="#">
+              <div class="card shadow">
+                <img src="./img/01.jpg" class="card-img-top" alt="..." />
+                <div class="card-body p-4">
+                  <p class="h5 card-text text-center">Burgers & Fries</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-6 mb-grid-gutter">
+            <a href="#">
+              <div class="card shadow">
+                <img src="./img/02.jpg" class="card-img-top" alt="..." />
+                <div class="card-body p-4">
+                  <p class="h5 card-text text-center">Noodles</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-6 mb-grid-gutter">
+            <a href="#">
+              <div class="card shadow">
+                <img src="./img/03.jpg" class="card-img-top" alt="..." />
+                <div class="card-body p-4">
+                  <p class="h5 card-text text-center">Sushi & Rolls</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-6 mb-grid-gutter">
+            <a href="#">
+              <div class="card shadow">
+                <img src="./img/04.jpg" class="card-img-top" alt="..." />
+                <div class="card-body p-4">
+                  <p class="h5 card-text text-center">Pizza & Pasta</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-6 mb-grid-gutter">
+            <a href="#">
+              <div class="card shadow">
+                <img src="./img/05.jpg" class="card-img-top" alt="..." />
+                <div class="card-body p-4">
+                  <p class="h5 card-text text-center">Coffee & Desserts</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-6 mb-grid-gutter">
+            <a href="#">
+              <div class="card shadow">
+                <img src="./img/06.jpg" class="card-img-top" alt="..." />
+                <div class="card-body p-4">
+                  <p class="h5 card-text text-center">Healthy & Food</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- App section -->
+    <section class="app-section">
+      <div class="container pt-5">
+        <div class="row align-items-center">
+          <div
+            class="
+              col-lg-5 col-sm-6
+              offset-xl-2 offset-lg-1
+              mt-md-n5
+              text-center text-sm-start
+            "
+          >
+            <h2 class="text-light mb-3 pt-5">
+              Order food on the go with Cartzilla App
+            </h2>
+            <p class="text-light opacity-10 d-sm-none d-md-block mb-0">
+              Pay with in app wallet, collect loyalty points, track your orders
+              in real time and much more.
+            </p>
+
+            <div class="mt-4 pt-2">
+              <a href="#" class="btn-market btn-apple me-3 mb-2">
+                <span class="btn-market-subtitle d-block">Download on the</span>
+                <span class="btn-market-title d-block">App Store</span>
+              </a>
+              <a href="#" class="btn-market btn-google me-3 mb-2">
+                <span class="btn-market-subtitle d-block">Download on the</span>
+                <span class="btn-market-title d-block">Google Play</span>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="
+              col-xl-4 col-lg-5 col-sm-6
+              text-center text-sm-start
+              pt-5 pt-sm-3
+            "
+          >
+            <img
+              src="./img/phone.png"
+              alt=""
+              class="d-block mx-auto img-fluid"
+              width="331"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join member -->
+    <section class="join my-lg-3 py-lg-4 my-2 py-3">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 mb-4">
+            <div
+              class="
+                d-block d-sm-flex
+                justify-content-between
+                align-items-center
+                rounded-3
+                bg-info
+              "
+            >
+              <div class="text-center text-sm-start p-5">
+                <h2>Become a Courier</h2>
+                <p class="text-muted">
+                  Earn competitive salary as delivery courier working flexible
+                  schedule.
+                </p>
+                <a href="#" class="btn btn-primary">Start earning</a>
+              </div>
+              <img
+                src="./img/courier.png"
+                alt=""
+                width="272"
+                class="mx-sm-0 mx-auto d-block"
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div
+              class="
+                d-block d-sm-flex
+                justify-content-between
+                align-items-center
+                rounded-3
+                bg-warning
+              "
+            >
+              <div class="text-center text-sm-start p-5">
+                <h2>Become a Partner</h2>
+                <p class="text-muted">
+                  Grow your business by reaching new customers.
+                </p>
+                <a href="#" class="btn btn-primary">Start earning</a>
+              </div>
+              <img
+                src="./img/chef.png"
+                alt=""
+                width="269"
+                class="mx-sm-0 mx-auto d-block"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular restaurants section -->
+    <section class="container my-lg-3 py-lg-4 my-2 py-3">
+      <h2 class="text-center pt-4 pt-sm-3">Popular restaurants in your city</h2>
+      <p class="text-muted text-center mb-5">
+        Check the best restaurants near you
+      </p>
+      <div class="row pb-2 pb-sm-0 pb-md-3">
+        <div class="col-md-3 col-sm-4 col-6">
+          <a
+            class="
+              d-block
+              bg-white
+              shadow-sm
+              rounded-3
+              py-3 py-sm-4
+              mb-grid-gutter
+            "
+            href="#"
+            ><img
+              class="d-block mx-auto"
+              src="img/01.png"
+              style="width: 150px"
+              alt=""
+          /></a>
+        </div>
+        <div class="col-md-3 col-sm-4 col-6">
+          <a
+            class="
+              d-block
+              bg-white
+              shadow-sm
+              rounded-3
+              py-3 py-sm-4
+              mb-grid-gutter
+            "
+            href="#"
+            ><img
+              class="d-block mx-auto"
+              src="img/02.png"
+              style="width: 150px"
+              alt=""
+          /></a>
+        </div>
+        <div class="col-md-3 col-sm-4 col-6">
+          <a
+            class="
+              d-block
+              bg-white
+              shadow-sm
+              rounded-3
+              py-3 py-sm-4
+              mb-grid-gutter
+            "
+            href="#"
+            ><img
+              class="d-block mx-auto"
+              src="img/03.png"
+              style="width: 150px"
+              alt=""
+          /></a>
+        </div>
+        <div class="col-md-3 col-sm-4 col-6">
+          <a
+            class="
+              d-block
+              bg-white
+              shadow-sm
+              rounded-3
+              py-3 py-sm-4
+              mb-grid-gutter
+            "
+            href="#"
+            ><img
+              class="d-block mx-auto"
+              src="img/04.png"
+              style="width: 150px"
+              alt=""
+          /></a>
+        </div>
+
+        <div class="col-md-3 col-sm-4 col-6">
+          <a
+            class="
+              d-block
+              bg-white
+              shadow-sm
+              rounded-3
+              py-3 py-sm-4
+              mb-grid-gutter
+            "
+            href="#"
+            ><img
+              class="d-block mx-auto"
+              src="img/05.png"
+              style="width: 150px"
+              alt=""
+          /></a>
+        </div>
+        <div class="col-md-3 col-sm-4 col-6">
+          <a
+            class="
+              d-block
+              bg-white
+              shadow-sm
+              rounded-3
+              py-3 py-sm-4
+              mb-grid-gutter
+            "
+            href="#"
+            ><img
+              class="d-block mx-auto"
+              src="img/06.png"
+              style="width: 150px"
+              alt=""
+          /></a>
+        </div>
+        <div class="col-md-3 col-sm-4 col-6">
+          <a
+            class="
+              d-block
+              bg-white
+              shadow-sm
+              rounded-3
+              py-3 py-sm-4
+              mb-grid-gutter
+            "
+            href="#"
+            ><img
+              class="d-block mx-auto"
+              src="img/07.png"
+              style="width: 150px"
+              alt=""
+          /></a>
+        </div>
+        <div class="col-md-3 col-sm-4 col-6">
+          <a
+            class="
+              d-block
+              bg-white
+              shadow-sm
+              rounded-3
+              py-3 py-sm-4
+              mb-grid-gutter
+            "
+            href="#"
+            ><img
+              class="d-block mx-auto"
+              src="img/08.png"
+              style="width: 150px"
+              alt=""
+          /></a>
+        </div>
+
+        <div class="col-md-3 col-sm-4 col-6">
+          <a
+            class="
+              d-block
+              bg-white
+              shadow-sm
+              rounded-3
+              py-3 py-sm-4
+              mb-grid-gutter
+            "
+            href="#"
+            ><img
+              class="d-block mx-auto"
+              src="img/09.png"
+              style="width: 150px"
+              alt=""
+          /></a>
+        </div>
+        <div class="col-md-3 col-sm-4 col-6">
+          <a
+            class="
+              d-block
+              bg-white
+              shadow-sm
+              rounded-3
+              py-3 py-sm-4
+              mb-grid-gutter
+            "
+            href="#"
+            ><img
+              class="d-block mx-auto"
+              src="img/10.png"
+              style="width: 150px"
+              alt=""
+          /></a>
+        </div>
+        <div class="col-md-3 col-sm-4 col-6">
+          <a
+            class="
+              d-block
+              bg-white
+              shadow-sm
+              rounded-3
+              py-3 py-sm-4
+              mb-grid-gutter
+            "
+            href="#"
+            ><img
+              class="d-block mx-auto"
+              src="img/11.png"
+              style="width: 150px"
+              alt=""
+          /></a>
+        </div>
+        <div class="col-md-3 col-sm-4 col-6">
+          <a
+            class="
+              d-block
+              bg-white
+              shadow-sm
+              rounded-3
+              py-3 py-sm-4
+              mb-grid-gutter
+            "
+            href="#"
+            ><img
+              class="d-block mx-auto"
+              src="img/12.png"
+              style="width: 150px"
+              alt=""
+          /></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer reviews section-->
+    <section class="bg-info py-lg-5 py-3">
+      <div class="container">
+        <h2 class="text-center pt-4 pt-sm-3 mb-5">Customer reviews</h2>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-body shadow-sm border-0">
+              <div class="d-block mb-2">
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star active"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                ullam, nostrum voluptatibus architecto iusto ea.
+              </p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center my-4">
+              <div class="round">
+                <img src="./img/03 (2).jpg" alt="" width="50" />
+              </div>
+              <div class="ps-3">
+                <h6 class="name my-0 py-0">Richard Davis</h6>
+                <p class="text-muted m-0 date">Feb 14, 2020</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-body shadow-sm border-0">
+              <div class="d-block mb-2">
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star active"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                ullam, nostrum voluptatibus architecto iusto ea.
+              </p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center my-4">
+              <div class="round">
+                <img src="./img/03 (2).jpg" alt="" width="50" />
+              </div>
+              <div class="ps-3">
+                <h6 class="name my-0 py-0">Richard Davis</h6>
+                <p class="text-muted m-0 date">Feb 14, 2020</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-body shadow-sm border-0">
+              <div class="d-block mb-2">
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star active"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                ullam, nostrum voluptatibus architecto iusto ea.
+              </p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center my-4">
+              <div class="round">
+                <img src="./img/03 (2).jpg" alt="" width="50" />
+              </div>
+              <div class="ps-3">
+                <h6 class="name my-0 py-0">Richard Davis</h6>
+                <p class="text-muted m-0 date">Feb 14, 2020</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card card-body shadow-sm border-0">
+              <div class="d-block mb-2">
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star-fill active"></i>
+                <i class="bi bi-star active"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+                ullam, nostrum voluptatibus architecto iusto ea.
+              </p>
+            </div>
+            <div class="d-flex justify-content-center align-items-center my-4">
+              <div class="round">
+                <img src="./img/03 (2).jpg" alt="" width="50" />
+              </div>
+              <div class="ps-3">
+                <h6 class="name my-0 py-0">Richard Davis</h6>
+                <p class="text-muted m-0 date">Feb 14, 2020</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker pt-5 pb-3">
+      <div class="container">
+        <div class="row">
+          <!-- 1 -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <div class="d-block">
+              <img src="./img/footer-logo-light.png" alt="" width="117" />
+            </div>
+            <div class="dropdown mt-4">
+              <button
+                class="btn btn-secondary dropdown-toggle px-2 py-1 lang"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img src="./img/en.png" alt="" width="20" />
+                <h6 class="d-inline-block m-0 fsz">Eng / $</h6>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-width"
+                aria-labelledby="dropdownMenuButton1"
+              >
+                <li class="dropdown-item">
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>$ USD</option>
+                    <option value="1">$ EUR</option>
+                    <option value="2">$ UKP</option>
+                    <option value="3">$ JPY</option>
+                  </select>
+                </li>
+                <li class="dropdown-item">
+                  <img src="./img/fr.png" alt="" width="20" />
+                  <h6 class="d-inline-block fsz">Fransis</h6>
+                </li>
+                <li class="dropdown-item">
+                  <img src="./img/de.png" alt="" width="20" />
+                  <h6 class="d-inline-block fsz">Deutsch</h6>
+                </li>
+                <li class="dropdown-item">
+                  <img src="./img/it.png" alt="" width="20" />
+                  <h6 class="d-inline-block fsz">Italiano</h6>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <h6 class="pb-3 text-light fw-bold mt-2">Join Us</h6>
+            <a href="#" class="d-block text-mute fsz mb-2"> Careers </a>
+            <a href="#" class="d-block text-mute fsz mb-2"> Restaurants </a>
+            <a href="#" class="d-block text-mute fsz mb-2">
+              Become a Courier
+            </a>
+            <a href="#" class="d-block text-mute fsz mb-2"> About </a>
+          </div>
+          <!-- 3 -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <h6 class="pb-3 text-light fw-bold mt-2">Let us help you</h6>
+            <a href="#" class="d-block text-mute fsz mb-2"> Help Center </a>
+            <a href="#" class="d-block text-mute fsz mb-2"> Support </a>
+            <a href="#" class="d-block text-mute fsz mb-2"> Contacts </a>
+          </div>
+          <!-- 4 -->
+          <div class="col-6 col-sm-4 col-lg-2">
+            <h6 class="pb-3 text-light fw-bold mt-2">Follow Us</h6>
+            <a href="#" class="d-block text-mute fsz mb-2"> Facebook </a>
+            <a href="#" class="d-block text-mute fsz mb-2"> Twitter </a>
+            <a href="#" class="d-block text-mute fsz mb-2"> Instagram </a>
+          </div>
+          <!-- 5 -->
+          <div class="col-sm-8 col-lg-4">
+            <h6 class="pb-3 text-light fw-bold mt-2">Download our app</h6>
+            <div class="d-flex justify-content-between">
+              <div class="pt-2">
+                <a
+                  href="#"
+                  class="btn btn-secondary btn-market btn-apple me-3 mb-2"
+                >
+                  <span class="btn-market-subtitle d-block"
+                    >Download on the</span
+                  >
+                  <span class="btn-market-title d-block">App Store</span>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-secondary btn-market btn-google me-3 mb-2"
+                >
+                  <span class="btn-market-subtitle d-block"
+                    >Download on the</span
+                  >
+                  <span class="btn-market-title d-block">Google Play</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="hr-light" />
+        <div class="d-md-flex justify-content-between pt-4 d-block text-center">
+          <div class="copy">
+            <p class="copy-text text-mute">
+              &copy; All rights reserved. Made by
+              <a href="#" class="text-mute copy-text">Code Teach</a>
+            </p>
+          </div>
+          <div class="privacy">
+            <a href="#" class="text-mute fsz mx-2"> Privacy Policy </a>
+            <a href="#" class="text-mute fsz mx-2"> Terms & Conditions </a>
+            <a href="#" class="text-mute fsz mx-2"> Cookies Policy </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
